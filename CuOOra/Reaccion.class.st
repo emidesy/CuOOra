@@ -14,7 +14,7 @@ Class {
 		'usuario',
 		'fechaCreacion'
 	],
-	#category : #CuOOra
+	#category : #'CuOOra-model'
 }
 
 { #category : #'instance creation' }
@@ -29,8 +29,8 @@ Reaccion >> fechaDeCreacion [
 
 { #category : #initialization }
 Reaccion >> initialize [
-	fechaCreacion := Date today.
-	usuario := ''.
+	fechaCreacion := DateAndTime now.
+	usuario := ''
 ]
 
 { #category : #accessing }

@@ -18,8 +18,15 @@ Class {
 		'misLikes',
 		'misDislikes'
 	],
-	#category : #CuOOra
+	#category : #'CuOOra-model'
 }
+
+{ #category : #accessing }
+Post class >> text: aString [
+	^ self new
+		text: aString;
+		yourself
+]
 
 { #category : #accessing }
 Post >> darDislike: unUsuario [
@@ -60,9 +67,9 @@ Post >> fechaCreacion [
 Post >> initialize [
 	descripcion := ''.
 	usuario := ''.
-	fechaCreacion := Date today.
-	misLikes:= OrderedCollection new.
-	misDislikes := OrderedCollection new.
+	fechaCreacion := DateAndTime now.
+	misLikes := OrderedCollection new.
+	misDislikes := OrderedCollection new
 ]
 
 { #category : #accessing }
@@ -74,6 +81,21 @@ puntaje := ((misLikes size) - (misDislikes size)).
 
 
 
+]
+
+{ #category : #accessing }
+Post >> text [
+	^ text
+]
+
+{ #category : #accessing }
+Post >> text: anObject [
+	text := anObject
+]
+
+{ #category : #accessing }
+Post >> timeStamp [
+	^ timeStamp
 ]
 
 { #category : #accessing }

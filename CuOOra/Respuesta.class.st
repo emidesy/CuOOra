@@ -10,7 +10,7 @@ Class {
 	#instVars : [
 		'miPregunta'
 	],
-	#category : #CuOOra
+	#category : #'CuOOra-model'
 }
 
 { #category : #'instance creation' }

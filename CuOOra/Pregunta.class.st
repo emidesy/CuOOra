@@ -15,7 +15,7 @@ Class {
 		'misRespuestas',
 		'misTopicos'
 	],
-	#category : #CuOOra
+	#category : #'CuOOra-model'
 }
 
 { #category : #'instance creation' }

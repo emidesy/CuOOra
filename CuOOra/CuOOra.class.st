@@ -18,7 +18,7 @@ Class {
 		'usuariosSistema',
 		'preguntasSistema'
 	],
-	#category : #CuOOra
+	#category : #'CuOOra-model'
 }
 
 { #category : #initialization }
