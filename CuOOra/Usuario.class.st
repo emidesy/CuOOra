@@ -16,28 +16,14 @@ Class {
 		'contrasena',
 		'usuariosQueSigo'
 	],
-	#classInstVars : [
-		'soleInstance'
-	],
 	#category : #'CuOOra-model'
 }
 
-{ #category : #'instance creation' }
-Usuario class >> clearSoleInstance [
-	soleInstance := nil
-]
-
 { #category : #creation }
-Usuario class >> nombre: nombre domicilio: unDomicilio [
+Usuario class >> nuevoConNombre: unNombre yContrasena: unaContrasena [
 	^ self new
-		domicilio: unDomicilio;
-		nombre: nombre;
+		nuevoConNombre: unNombre yContrasena: unaContrasena;
 		yourself
-]
-
-{ #category : #'instance creation' }
-Usuario class >> soleInstance [
-	^ soleInstance ifNil: [ soleInstance := self new ]
 ]
 
 { #category : #accessing }
@@ -76,10 +62,12 @@ Usuario >> fechaCreacion [
 ]
 
 { #category : #initialization }
-Usuario >> initialize [ 
-nombre:=''.
-contrasena:=''.
-usuariosQueSigo := OrderedCollection new
+Usuario >> initialize [
+	nombre := ''.
+	contrasena := ''.
+	fechaCreacion := DateAndTime now.
+	usuariosQueSigo := OrderedCollection new
+	
 ]
 
 { #category : #accessing }
@@ -90,13 +78,6 @@ Usuario >> nombre [
 { #category : #accessing }
 Usuario >> nombre: anObject [
 	nombre := anObject
-]
-
-{ #category : #initialization }
-Usuario >> nuevoConNombre:unNombre YContrasena: unaContrasena [
-nombre := unNombre.
-contrasena:= unaContrasena.
-^ self.
 ]
 
 { #category : #initialization }

@@ -17,11 +17,11 @@ HomeComponent >> findFriend [
 { #category : #rendering }
 HomeComponent >> renderContentOn: aCanvas [
 	aCanvas heading: 'Welcome ' , self session user nombre.
-	self renderPostsOn: aCanvas.
+	"self renderPostsOn: aCanvas.
 	aCanvas horizontalRule.
 	self renderFriendsOn: aCanvas.
 	aCanvas horizontalRule.
-	self renderLogoutButtonOn: aCanvas
+	self renderLogoutButtonOn: aCanvas Unmatched "
 ]
 
 { #category : #rendering }

@@ -4,11 +4,21 @@ Class {
 	#category : #'CuOOra-ui'
 }
 
+{ #category : #accessing }
+RegisterComponent >> name [
+	^ name
+]
+
+{ #category : #accessing }
+RegisterComponent >> name: anObject [
+	name := anObject
+]
+
 { #category : #rendering }
 RegisterComponent >> registerAndLogin [
 	| theUser |
 	theUser := Usuario nuevoConNombre: usuario yContrasena: contrasena.
-	self model addUser: theUser.
+	self model agregarUsuario: theUser.
 	self proceedWith: theUser
 ]
 

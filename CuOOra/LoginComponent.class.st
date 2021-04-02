@@ -12,7 +12,7 @@ Class {
 
 { #category : #callbacks }
 LoginComponent >> login [
-	(self model nuevoConNombre: usuario yContrasena: contrasena)
+	(self model loginConNombre: usuario yContrasena: contrasena)
 		ifNotNil: [ :it | self proceedWith: it ].
 	usuario := nil.
 	contrasena := nil
@@ -27,7 +27,7 @@ LoginComponent >> registerNewUser [
 LoginComponent >> renderButtonsOn: aCanvas [
 	self renderSignInButtonOn: aCanvas.
 	aCanvas horizontalRule.
-	aCanvas paragraph: 'Don''t have an account?'.
+	aCanvas paragraph: 'No tenes cuenta?'.
 	self renderSignUpButtonOn: aCanvas
 ]
 
@@ -42,5 +42,5 @@ LoginComponent >> renderSignInButtonOn: aCanvas [
 LoginComponent >> renderSignUpButtonOn: aCanvas [
 	aCanvas submitButton
 		callback: [ self registerNewUser ];
-		with: 'Sign Up, it''s free'
+		with: 'Crear cuenta'
 ]

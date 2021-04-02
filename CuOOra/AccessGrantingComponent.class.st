@@ -20,7 +20,7 @@ AccessGrantingComponent >> contrasena: anObject [
 
 { #category : #model }
 AccessGrantingComponent >> model [
-	^ Usuario soleInstance
+	^ CuOOra  soleInstance
 ]
 
 { #category : #private }
